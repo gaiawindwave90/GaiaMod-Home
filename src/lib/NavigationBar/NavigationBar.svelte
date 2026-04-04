@@ -47,7 +47,7 @@
 
     const isAprilFirst = isAprilFools();
     const randomColor = (() => {
-        const colors = ["#00c3ff", "#ff4c4c", "#66757f", "#ffd000", "#b200fe"];
+        const colors = ["#2D2DD2", "#ff4c4c", "#66757f", "#ffd000", "#b200fe"];
         return colors[Math.round(Math.random() * (colors.length - 1))];
     })();
 
@@ -486,10 +486,10 @@
 
 <style>
     :root {
-        --penguinmod-color: #00c3ff;
+        --penguinmod-color: #2D2DD2;
     }
     :global(body.dark-mode) {
-        --penguinmod-color: #009ccc;
+        --penguinmod-color: #2424A8;
     }
 
     .bar {

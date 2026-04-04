@@ -1,7 +1,14 @@
+<script>
+    export let width;
+    export let height;
+    export let style;
+</script>
+
 <svg
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
+    style={`width: ${width};height: ${height};${style ? style : ""}`}
     viewBox="0,0,83.21065,104.99128"
 >
     <g transform="translate(-194.59692,-120.88173)">
@@ -130,7 +137,7 @@
                 transform="translate(261.26959,143.66512) rotate(-9.94181) scale(0.57756,0.57756)"
                 font-size="40"
                 xml:space="preserve"
-                fill="#2D2DD2"
+                fill="#00c3ff"
                 fill-rule="nonzero"
                 stroke="none"
                 stroke-width="1"
@@ -148,7 +155,7 @@
                 transform="translate(196.68566,182.22971) rotate(14.51276) scale(0.57756,0.57756)"
                 font-size="40"
                 xml:space="preserve"
-                fill="#2D2DD2"
+                fill="#00c3ff"
                 fill-rule="nonzero"
                 stroke="none"
                 stroke-width="1"
@@ -167,7 +174,7 @@
                 transform="translate(262.33941,210.59022) rotate(-4.10802) scale(0.57756,0.57756)"
                 font-size="40"
                 xml:space="preserve"
-                fill="#2D2DD2"
+                fill="#00c3ff"
                 fill-rule="nonzero"
                 stroke="none"
                 stroke-width="1"
@@ -208,3 +215,9 @@
         </g>
     </g>
 </svg>
+
+<style>
+    * {
+        user-select: none;
+    }
+</style>

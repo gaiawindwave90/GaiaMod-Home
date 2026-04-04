@@ -32,6 +32,7 @@
 
     // Icons
     import PenguinConfusedSVG from "../resources/icons/Penguin/confused.svelte";
+    import MiniGaiaConfusedSVG from "../resources/icons/Penguin/confused.svelte";
 
     const isAprilFools = () => {
         if (!browser) return false;
@@ -298,10 +299,10 @@
 </script>
 
 <svelte:head>
-    <title>PenguinMod - Home</title>
-    <meta name="title" content="PenguinMod - Home" />
-    <meta property="og:title" content="PenguinMod - Home" />
-    <meta property="twitter:title" content="PenguinMod - Home" />
+    <title>GaiaMod - Home</title>
+    <meta name="title" content="GaiaMod - Home" />
+    <meta property="og:title" content="GaiaMod - Home" />
+    <meta property="twitter:title" content="GaiaMod - Home" />
     <meta
         name="description"
         content="The area where featured projects and community stuff & info is shown."
@@ -310,8 +311,8 @@
         property="twitter:description"
         content="The area where featured projects and community stuff & info is shown."
     />
-    <meta property="og:url" content="https://penguinmod.com/" />
-    <meta property="twitter:url" content="https://penguinmod.com/" />
+    <meta property="og:url" content="https://gaiamod-main.github.io/GaiaMod-Home/" />
+    <meta property="twitter:url" content="https://gaiamod-main.github.io/GaiaMod-Home/" />
     <meta
         name="google-site-verification"
         content="07oAYybKa_CH2le7AvPJkNNtwhZSq_G0V4d9P7AIZYE"
@@ -325,15 +326,12 @@
 
     <Alert
         onlyShowID={"donatee:_3"}
-        text={"PenguinMod is a free-to-use visual coding website. Your support can help us keep the website working!"}
+        text={"GaiaMod is a free-to-use visual coding website. Your support can help us keep the website working!"}
         textBreakup={true}
         textColor={"white"}
         hasImage={true}
         imgSrc={"/happy.svg"}
         imgAlt={":D"}
-        hasButton={true}
-        buttonText={"Support"}
-        buttonHref={"/support"}
     />
     <StatusAlert />
 
@@ -342,14 +340,14 @@
             <div style="margin-left: 8rem;">
                 <h1>
                     <LocalizedText
-                        text="Block-based coding with tons of capabilities"
+                        text="Block-based coding with lots of capabilities"
                         key="home.introduction1"
                         lang={currentLang}
                     />
                 </h1>
                 <h1>
                     <LocalizedText
-                        text="Built off of TurboWarp and Scratch"
+                        text="Built off of PenguinMod, TurboWarp and Scratch"
                         key="home.introduction2"
                         dolink={true}
                         lang={currentLang}
@@ -362,75 +360,18 @@
                 >
                     {#if !thingyActive}
                         <LocalizedText
-                            text="Try it out"
+                            text="Try it out!"
                             key="home.tryout"
                             lang={currentLang}
                         />
                     {:else}
-                        EEEAAAOOO
+                        BOOOOOOOOOOOOOOO!!!!!
                     {/if}
                 </Button>
             </div>
-
-            <!-- only render video if we are definetly not logged in -->
-            {#if loggedIn === false}
-                {#if !thingyActive}
-                    <iframe
-                        width="560"
-                        height="315"
-                        src="https://www.youtube-nocookie.com/embed/g8zwb4W3G8Q"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                        class="example-video"
-                    />
-                {:else}
-                    <iframe
-                        src="/eao.html"
-                        title="The Thingy"
-                        width="426.666667"
-                        height="240"
-                        frameborder="0"
-                        class="example-video"
-                    />
-                {/if}
-            {:else}
-                <img
-                    src="/penguins/frontpage.svg"
-                    alt="PenguinMod"
-                    style="margin-right: 8rem;"
-                />
-            {/if}
         </div>
 
-        {#if langDecided && currentLang != "en" && !loggedIn}
-            <div class="section-language-warning">
-                <img
-                    src="/warning.png"
-                    draggable="false"
-                    style="height: 24px; margin-right: 6px"
-                    alt="Warning"
-                />
-                <p>
-                    <LocalizedText
-                        text="PenguinMod is made by English-speaking developers. Expect minor issues and sorry for any translation errors."
-                        key="translation.warning"
-                        lang={currentLang}
-                    />
-                </p>
-            </div>
-        {/if}
-
         <div class="section-links">
-            <Button link={LINK.packager}>
-                <LocalizedText
-                    text="Packager"
-                    key="home.footer.sections.website.packager"
-                    lang={currentLang}
-                />
-            </Button>
             <Button link={LINK.credits}>
                 <LocalizedText
                     text="Credits"
@@ -438,41 +379,15 @@
                     lang={currentLang}
                 />
             </Button>
-            <Button link={"/support"}>
-                <LocalizedText
-                    text="Funding"
-                    key="home.footer.sections.donate"
-                    lang={currentLang}
-                />
-            </Button>
             <Button label="GitHub" link={LINK.github} />
-            <Button link={LINK.wiki}>
-                <LocalizedText
-                    text="Community Wiki"
-                    key="home.footer.sections.community.wiki"
-                    lang={currentLang}
-                />
-            </Button>
         </div>
     {/if}
 
-    {#if langDecided && currentLang != "en" && loggedIn}
-        <div class="section-language-warning">
-            <img src="/warning.png" draggable="false" alt="Warning" />
-            <p>
-                <LocalizedText
-                    text="PenguinMod is made by English-speaking developers. Expect minor issues and sorry for any translation errors."
-                    key="translation.warning"
-                    lang={currentLang}
-                />
-            </p>
-        </div>
-    {/if}
-
+	<center><img src="https://gaiamod-main.github.io/GaiaMod/static/assets/20c5e13410ecd4af93084480c427737c.svg" alt="GaiaMod" style="width: 20rem"></center>
     <p style="width: 100%; text-align: center;">
         <i>
             <LocalizedText
-                text="Scratch Note: Please don't mention PenguinMod on Scratch, we have different rules compared to Scratch! 😅"
+                text="Scratch Note: Please don't mention GaiaMod on Scratch, we have different rules compared to Scratch! 😅"
                 key="home.scratchnote"
                 lang={currentLang}
             />
@@ -611,7 +526,7 @@
                             {/if}
                         {/each}
                     {:else if feedIsEmpty}
-                        <PenguinConfusedSVG width="6rem" />
+                        <MiniGaiaConfusedSVG width="6rem" />
                         <p>
                             <LocalizedText
                                 text="Nothing was found."
@@ -715,21 +630,10 @@
                 <!-- NOTE: This section is entirely hard-coded for time-relevant stuff, but avoid making new classes for a topic. -->
                 <div class="category-news">
                     <div class="category-news-content">
-                        <h2 style="margin-block:4px;">Spring PenguinJam has ended!</h2>
+                        <h2 style="margin-block:4px;">GaiaMod Home is made!@</h2>
                         <div style="width:100%">
                             <p>
-                                Time's up everyone, the 2026 Spring PenguinJam has ended!
-                                <br />
-                                Thanks for submitting your projects this year!
-                                <br />
-                                We're going to start ranking your projects now.
-                                Please wait until we are done with ranking!
-                            </p>
-                            <img
-                                src="/events/news/penguinjamspring2026.webp"
-                                alt="Spring PenguinJam 2026"
-                                style="width:100%;"
-                            />
+                                Enjoy!
                         </div>
                     </div>
                     <div class="category-footer">
@@ -743,7 +647,7 @@
                                 ]}
                             {:else}
                                 <LocalizedText
-                                    text="PenguinNews is not translated in your language. Sorry! :("
+                                    text="GaiaMod News is not translated in your language. Sorry! :("
                                     key="home.sections.informational.notranslation"
                                     lang={currentLang}
                                 />
@@ -779,7 +683,7 @@
                     }}
                 >
                     <LocalizedText
-                        text="PenguinNews"
+                        text="GaiaMod News"
                         key="home.sections.informational"
                         lang={currentLang}
                     />
@@ -837,7 +741,7 @@
                     <div
                         style="display:flex;flex-direction:column;align-items: center;width: 100%;"
                     >
-                        <PenguinConfusedSVG width="8rem" />
+                        <MiniGaiaConfusedSVG width="8rem" />
                         <p>
                             <LocalizedText
                                 text="Nothing found. You can help feature projects by clicking the yellow checkmark below them."
@@ -901,7 +805,7 @@
                     <div
                         style="display:flex;flex-direction:column;align-items: center;width: 100%;"
                     >
-                        <PenguinConfusedSVG width="8rem" />
+                        <MiniGaiaConfusedSVG width="8rem" />
                         <p>
                             <LocalizedText
                                 text="Nothing found. You can help feature projects by clicking the yellow checkmark below them."
@@ -965,7 +869,7 @@
                         <div
                             style="display:flex;flex-direction:column;align-items: center;width: 100%;"
                         >
-                            <PenguinConfusedSVG width="8rem" />
+                            <MiniGaiaConfusedSVG width="8rem" />
                             <p>
                                 <LocalizedText
                                     text="Nothing found. You can fill this section by checking out other people's projects and liking them."
@@ -1064,8 +968,8 @@
                             </p>
                         {:else}
                             <img
-                                src="/penguins/server.svg"
-                                alt="Server Penguin"
+                                src="/mini-gaia/server.svg"
+                                alt="Mini-Gaia"
                                 style="width: 15rem"
                             />
                             <p>
@@ -1094,7 +998,7 @@
     <div class="footer">
         <p>
             <LocalizedText
-                text="PenguinMod is not affiliated with Scratch, TurboWarp, the Scratch Team, or the Scratch Foundation."
+                text="GaiaMod is not affiliated with Scratch, TurboWarp, PenguinMod, the Scratch Team, or the Scratch Foundation."
                 key="home.footer.notaffiliated"
                 lang={currentLang}
             />
@@ -1139,13 +1043,7 @@
                         lang={currentLang}
                     />
                 </a>
-                <a href={LINK.packager}>
-                    <LocalizedText
-                        text="Packager"
-                        key="home.footer.sections.website.packager"
-                        lang={currentLang}
-                    />
-                </a>
+ 
             </div>
             <div class="footer-section">
                 <p>
@@ -1157,7 +1055,7 @@
                 </p>
                 <a
                     target="_blank"
-                    href={"https://github.com/PenguinMod/PenguinMod-Home/issues"}
+                    href={"https://github.com/GaiaMod-Main/GaiaMod-Home/issues"}
                 >
                     <LocalizedText
                         text="Report an issue"
@@ -1174,7 +1072,7 @@
                 </a>
                 <a
                     target="_blank"
-                    href={`https://penguinmod.com/redirect?t=${encodeURIComponent(btoa(LINK.discord))}`}
+                    href={`https://gaiamod-main.github.io/GaiaMod-Home/redirect?t=${encodeURIComponent(btoa(LINK.discord))}`}
                     >Discord</a
                 >
             </div>
@@ -1223,7 +1121,7 @@
                         lang={currentLang}
                     />
                 </p>
-                <a href={"/support"}>PenguinMod</a>
+                <a href={"/support"}>GaiaMod</a>
                 <a target="_blank" href={LINK.donate.scratch}>Scratch</a>
             </div>
         </div>
@@ -1368,7 +1266,7 @@
     .section-toggle-button {
         border-radius: 1024px;
         padding: 4px 10px;
-        background: #008cff;
+        background: #003CFF;
         font-weight: bold;
         font-size: 1em;
         border: 0;

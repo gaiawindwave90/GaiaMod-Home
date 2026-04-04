@@ -64,7 +64,7 @@ export default {
     /**
      * PenguinMod's home page
      */
-    home: "https://penguinmod.com/",
+    home: "https://gaiamod-main.github.io/GaiaMod-Home/",
 
     /**
      * PenguinMod's packager page
@@ -79,7 +79,7 @@ export default {
     /**
      * PenguinMod's Discord invite
      */
-    discord: "https://discord.gg/NZ9MBMYTZh",
+    discord: "https://discord.gg/k7RYUQDQmh",
 
     /**
      * Scratch's website
